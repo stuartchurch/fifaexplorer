@@ -1,9 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-import numpy as np
 
-#@st.cache
+@st.cache
 df=pd.read_csv('All_Player_List.csv')
 
 df['delta'] = df['Potential Score'] - df['Overall Score']
