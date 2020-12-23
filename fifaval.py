@@ -41,27 +41,3 @@ plt.ylabel(Y)
 plt.show()
 st.pyplot(fig)
 
-
-#ordered_df = df.sort_values(by='Age')
-#my_range=range(1,len(df.index)+1)
-
-import seaborn as sns
-#fig2 = plt.figure(figsize=(20, 50))
-#plt.hlines(y=my_range, xmin=ordered_df['Overall Score'], xmax=ordered_df['Potential Score'], color='gray', alpha=0.4)
-#plt.scatter(ordered_df['Overall Score'], my_range, color='black', s=20, alpha=1, label='Overall Score')
-#plt.scatter(ordered_df['Potential Score'], my_range, color='red', s=20, alpha=1 , label='Potential Score')
-#plt.legend()
-#st.pyplot(fig2)
-
-
-
-
-#MarketValue = st.sidebar.slider("Market Value",0,120000000,(df['Market Value'].min(),df['Market Value'].max()))
-#OverallScore = st.sidebar.slider("Overall Score",0,100,(df['Overall Score'].min(),df['Overall Score'].max()))
-#PotentialScore = st.sidebar.slider("Potential Score",0,100,(df['Potential Score'].min(),df['Potential Score'].max()))
-#BallSkills = st.sidebar.slider("Ball Skills",0,100,(df['Ball Skills'].min(),df['Ball Skills'].max()))
-#Mental = st.sidebar.slider("Mental ability",0,100,(df['Mental'].min(),df['Mental'].max()))
-#Potential = st.sidebar.slider("Potential increase",0,20, (df['delta'].min(),df['delta'].max()))
-
-# To run:   streamlit run ~/Library/Application\ Support/JetBrains/PyCharmCE2020.2/scratches/fifaval.py
-#  http://localhost:8501/
