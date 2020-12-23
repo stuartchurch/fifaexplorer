@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import io
+import requests
 
 #@st.cache
 url = "https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
