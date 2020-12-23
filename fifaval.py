@@ -1,10 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import requests
 
 #@st.cache
-url = "https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
-df = pd.read_csv(url)
+url = 'https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv'
+s=requests.get(url).content
+df=pd.read_csv(s)
 
 df['delta'] = df['Potential Score'] - df['Overall Score']
 
