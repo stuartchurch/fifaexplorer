@@ -2,10 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-#@st.cache
-#url = "https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
-#df = pd.read_csv(url)
-#df['delta'] = df['Potential Score'] - df['Overall Score']
+@st.cache
+url = "https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
+df = pd.read_csv(url)
+
+df['delta'] = df['Potential Score'] - df['Overall Score']
 
 st.title("Exploring the Market Value of FIFA 20 Players")
 
