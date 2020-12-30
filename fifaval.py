@@ -7,6 +7,8 @@ import streamlit as st
 df = pd.read_csv("All_Player_List.csv")
 df['delta'] = df['Potential Score'] - df['Overall Score']
 
+st.dataframe(df.head(50))
+
 st.title("Exploring the Market Value of FIFA 20 Players")
 
 marketvalue = st.sidebar.slider("Market value (GBP)",0,105500000, (0,105500000))
