@@ -9,9 +9,8 @@ df['delta'] = df['Potential Score'] - df['Overall Score']
 
 st.title("Exploring the Market Value of FIFA 20 Players")
 
-st.dataframe(df.head(50))
-
-marketvalue = st.sidebar.slider("Market value (GBP",df['Market Value'].min(),df['Market Value'].max(), (df['Market Value'].min(),df['Market Value'].max()))
+marketvalue = st.sidebar.slider("Market value (GBP)",df['Market Value'].min(),df['Market Value'].max(), (df['Market Value'].min(),df['Market Value'].max()))
+#marketvalue = st.sidebar.slider("Market value (GBP",df['Market Value'].min(),df['Market Value'].max(), (df['Market Value'].min(),df['Market Value'].max()))
 overall = st.sidebar.slider("Overall Score",0,100, (0,100))
 delta = st.sidebar.slider("Potential Increase",0,20,(0,20))
 mental = st.sidebar.slider("Mental strength",0,100, (0,100))
