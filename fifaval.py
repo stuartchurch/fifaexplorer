@@ -3,9 +3,8 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 #@st.cache
-
-df=pd.read_csv('All_Player_List.csv')
-
+url="https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
+df = pd.read_csv(url)
 df['delta'] = df['Potential Score'] - df['Overall Score']
 
 st.title("Exploring the Market Value of FIFA 20 Players")
@@ -42,4 +41,3 @@ plt.xlabel(X)
 plt.ylabel(Y)
 plt.show()
 st.pyplot(fig)
-
