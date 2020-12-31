@@ -11,7 +11,7 @@ st.title("Exploring the Market Value of FIFA 20 Players")
 
 mvmin = df['Market Value'].min()
 mvmax = df['Market Value'].max()
-marketvalue = st.sidebar.slider("Market value",mvmin,mvmax, (mvminmvmax))
+marketvalue = st.sidebar.slider("Market value",mvmin,mvmax, (mvmin,mvmax))
 #marketvalue = st.sidebar.slider("Market value (GBP)",df['Market Value'].min(),df['Market Value'].max(), (df['Market Value'].min(),df['Market Value'].max()))
 overall = st.sidebar.slider("Overall Score",0,100, (0,100))
 delta = st.sidebar.slider("Potential Increase",0,20,(0,20))
