@@ -7,7 +7,7 @@ import streamlit as st
 df = pd.read_csv("All_Player_List.csv")
 df['delta'] = df['Potential Score'] - df['Overall Score']
 
-st.dataframe(df.type)
+st.dataframe(df.type())
 
 st.title("Exploring the Market Value of FIFA 20 Players")
 
