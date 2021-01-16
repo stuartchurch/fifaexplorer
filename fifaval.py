@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-#df = st.cache(pd.read_csv)("All_Player_List.csv")
+df = st.cache(pd.read_csv)("All_Player_List.csv",header=None, error_bad_lines=False)
 
-url="https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
-df = pd.read_csv(url,header=None, error_bad_lines=False)
+#url="https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
+#df = pd.read_csv(url,header=None, error_bad_lines=False)
 st.dataframe(df.head(50))
 
 df['delta'] = df['Potential Score'] - df['Overall Score']
