@@ -5,7 +5,7 @@ import streamlit as st
 #df = st.cache(pd.read_csv)("All_Player_List.csv")
 
 url="https://github.com/stuartchurch/fifaexplorer/blob/main/All_Player_List.csv"
-df = pd.read_csv(url)
+df = pd.read_csv(url,header=None, error_bad_lines=False)
 
 df['delta'] = df['Potential Score'] - df['Overall Score']
 
