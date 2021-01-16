@@ -22,7 +22,7 @@ delta = st.sidebar.slider("Potential Increase",0,20,(0,20))
 mental = st.sidebar.slider("Mental strength",0,100, (0,100))
 ballskills = st.sidebar.slider("Ball skills",0,100, (0,100))
 
-df = df[(df['Overall Score'] >= overall[0])
+subset = df[(df['Overall Score'] >= overall[0])
         & (df['Overall Score'] <= overall[1])
         & (df['delta'] >= delta[0])
         & (df['delta'] <= delta[1])
@@ -35,7 +35,7 @@ df = df[(df['Overall Score'] >= overall[0])
 
 st.header("First 50 results")
 
-st.dataframe(df.head(50))
+st.dataframe(subset.head(50))
 
 st.header("Choose chart options:")
 
@@ -43,7 +43,7 @@ X = st.selectbox('X-axis',['Overall Score', 'Market Value', 'Potential Score','M
 Y = st.selectbox('Y-axis',['Market Value', 'Overall Score', 'Potential Score', 'Mental','Ball Skills','Age'])
 
 fig, ax = plt.subplots()
-plt.scatter(df[X],df[Y])
+plt.scatter(subset[X],subset[Y])
 plt.xlabel(X)
 plt.ylabel(Y)
 plt.show()
